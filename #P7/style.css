@@ -1,0 +1,157 @@
+* {
+    padding: 0; /* إزالة أي مسافات داخلية لجميع العناصر */
+    margin: 0; /* إزالة أي مسافات خارجية لجميع العناصر */
+    color: #fff; /* تعيين اللون الافتراضي للنص إلى الأبيض */
+    font-family: sans-serif; /* تحديد نوع الخط الافتراضي */
+}
+
+body {
+    background-color: #001; /* تعيين لون خلفية الصفحة */
+    display: flex; /* استخدام نظام Flexbox لترتيب المحتوى */
+}
+
+.img-box {
+    width: 50px; /* تحديد عرض الحاوية */
+    height: 50px; /* تحديد ارتفاع الحاوية */
+    border-radius: 50%; /* جعل الحاوية دائرية */
+    overflow: hidden; /* إخفاء أي محتوى زائد خارج الحاوية */
+    border: 2px solid white; /* إضافة حد أبيض حول الحاوية */
+    flex-shrink: 0; /* منع تغيير حجم العنصر عند ضغط الحاوية */
+    transition: .5s; /* إضافة تأثير انتقال للخصائص القابلة للتغيير */
+}
+
+.img-box img {
+    width: 100%; /* جعل الصورة تملأ العرض بالكامل */
+    height: 100%; /* جعل الصورة تملأ الارتفاع بالكامل */
+    object-fit: cover; /* لضمان تناسق الصورة داخل الإطار */
+}
+
+.profile {
+    display: flex; /* ترتيب العناصر أفقيًا */
+    align-items: center; /* محاذاة العناصر عموديًا في المركز */
+    gap: 20px; /* ترك مسافة بين العناصر */
+}
+
+.profile h2 {
+    font-size: 20px; /* تحديد حجم الخط */
+    text-transform: capitalize; /* جعل الحرف الأول من كل كلمة كبيرًا */
+}
+
+.menu {
+    background-color: #123; /* تعيين لون خلفية القائمة */
+    width: 70px; /* تحديد العرض الأساسي للقائمة */
+    height: 100vh; /* جعل القائمة تمتد لطول الشاشة */
+    padding: 10px; /* إضافة مسافة داخلية */
+    overflow: hidden; /* إخفاء أي محتوى زائد */
+    transition: 0.5s; /* إضافة تأثير انتقال عند تغيير العرض */
+}
+
+.menu:hover {
+    width: 260px; /* زيادة عرض القائمة عند التمرير فوقها */
+}
+
+ul {
+    list-style: none; /* إزالة النقاط من القائمة */
+    position: relative; /* إعداد وضعية العناصر بداخلها */
+    height: 95%; /* تعيين ارتفاع القائمة */
+}
+
+ul li a {
+    border-radius: 10px; /* تقويس الزوايا */
+    text-decoration: none; /* إزالة خط التسطير عن الروابط */
+    padding: 10px 20px; /* إضافة مسافة داخلية */
+    margin: 10px 0; /* إضافة مسافة خارجية بين العناصر */
+    display: flex; /* ترتيب المحتوى بداخل الرابط */
+    align-items: center; /* محاذاة المحتوى عموديًا */
+    gap: 20px; /* إضافة مسافة بين الأيقونة والنص */
+    transition: 0.5s; /* إضافة تأثير انتقال للتغيرات */
+}
+
+ul li a:hover, .active, .data-info .box:hover, td:hover {
+    background-color: #ffffff55; /* تغيير لون الخلفية عند التفاعل */
+}
+
+.log-out {
+    position: absolute; /* وضع زر تسجيل الخروج أسفل القائمة */
+    bottom: 0%; /* محاذاة العنصر إلى الأسفل */
+    width: 100%; /* جعله يمتد عبر عرض القائمة */
+}
+
+.log-out a {
+    background-color: #0a768a; /* تعيين لون خلفية مميز لزر تسجيل الخروج */
+}
+
+ul li a i {
+    font-size: 30px; /* تعيين حجم الأيقونات داخل القائمة */
+}
+
+.content {
+    width: 100%; /* جعل المحتوى يملأ المساحة المتبقية */
+    margin: 10px; /* إضافة مسافة خارجية حول المحتوى */
+}
+
+.title-info {
+    background-color: #123; /* تعيين لون خلفية العناوين */
+    padding: 10px; /* إضافة مسافة داخلية */
+    display: flex; /* ترتيب المحتوى داخليًا */
+    align-items: center; /* محاذاة المحتوى عموديًا */
+    justify-content: space-between; /* توزيع المحتوى بالتساوي */
+    border-radius: 8px; /* تقويس الزوايا */
+    margin: 10px 0; /* إضافة مسافة خارجية */
+}
+
+.data-info {
+    display: flex; /* ترتيب العناصر باستخدام Flexbox */
+    align-items: center; /* محاذاة العناصر عموديًا */
+    justify-content: space-between; /* توزيع العناصر بالتساوي */
+    flex-wrap: wrap; /* السماح للعناصر بالانتقال إلى الصف التالي */
+    gap: 10px; /* ترك مسافات بين العناصر */
+}
+
+.data-info .box {
+    background-color: #123; /* تعيين لون خلفية للصناديق */
+    height: 150px; /* تعيين ارتفاع الصندوق */
+    flex-basis: 150px; /* تعيين العرض الأدنى للصندوق */
+    flex-grow: 1; /* السماح للصناديق بالتمدد */
+    border-radius: 8px; /* تقويس زوايا الصناديق */
+    display: flex; /* ترتيب المحتوى بداخل الصندوق */
+    align-items: center; /* محاذاة المحتوى عموديًا */
+    justify-content: space-around; /* توزيع المحتوى بالتساوي */
+}
+
+.data-info .box i {
+    font-size: 40px; /* تحديد حجم الأيقونات داخل الصناديق */
+}
+
+.data-info .box .data {
+    text-align: center; /* محاذاة النصوص داخل الصناديق إلى المنتصف */
+}
+
+.data-info .box .data span {
+    font-size: 30px; /* تعيين حجم النصوص المميزة */
+}
+
+table {
+    width: 100%; /* جعل الجدول يمتد لعرض المحتوى */
+    text-align: center; /* محاذاة النصوص داخل الجدول */
+    border-spacing: 8px; /* إضافة مسافات بين الخلايا */
+}
+
+td, th {
+    background-color: #123; /* تعيين لون خلفية للخلايا */
+    height: 40px; /* تحديد ارتفاع الخلايا */
+    border-radius: 8px; /* تقويس زوايا الخلايا */
+}
+
+.price, .count {
+    padding: 6px; /* إضافة مسافات داخلية */
+    border-radius: 6px; /* تقويس زوايا النصوص */
+}
+
+.price {
+    color: green; /* تعيين لون النصوص المتعلقة بالأسعار */
+}
+
+.count {
+    color: gold; /* تعيين لون النصوص المتعلقة بالكميات */
+}
